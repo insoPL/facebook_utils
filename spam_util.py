@@ -12,6 +12,14 @@ def spam_post_with_comments(graph, post_id):
         graph.put_comment(post_id, "komentarz"+str(x))
 
 
+def spam_comment_with_comments(graph, comment_id):
+    for x in range(15):
+        if random.randint(0, 1) == 0:
+            graph.put_comment(comment_id, "komentarz"+str(x))
+        else:
+            graph.put_comment(comment_id, "komenkeytarz" + str(x))
+
+
 def spam_posts_with_key(graph, target_group_id):
     for x in range(20):
         if random.randint(0, 1) == 0:

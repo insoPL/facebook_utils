@@ -28,16 +28,3 @@ def get_whole_feed(graph, target_group_id):
         next_page = next_page.lstrip("https://graph.facebook.com/v2.7/")
         posts = graph.get_object(next_page)
     return whole_feed
-
-
-def licz_slowa(posts, key):
-    counter = 0
-    for post in posts:
-        if 'message' in post and key in post['message']:
-            counter += 1
-         #   count_in_comments(post, key)
-    return counter
-
-
-def count_in_comments(post, key):
-    print()
